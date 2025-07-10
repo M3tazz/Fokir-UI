@@ -562,13 +562,6 @@ video {
   color: rgb(31 41 55 / var(--tw-text-opacity, 1));
 }
 
-.icon {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  color:#ff305b;
-}
-
 .container {
   width: 100%;
 }
