@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Portfolio website for [Moataz Hamdy], Frontend Developer."
+    />
+    <meta http-equiv="Cache-control" content="public" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fokir</title>
+    <link rel="icon" type="image/png" href="../images/spider.webp" />
+    <link
+      rel="preload"
+      href="fonts/font.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="./output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/d109a23a31.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <i class="fa-brands fa-nfc-directional"></i> -->
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Alertify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    />
+    <!--  -->
+    <style>
+      /* * {
+        outline: 1px solid red;
+      } */
+      html {
+        scroll-behavior: smooth;
+      }
+      .menu-icon {
+        /* text-align: center; */
+        background-color: red;
+        width: 190px;
+        height: 0.5px;
+        /* margin-left: 10px; */
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .menu-icon::before,
+      .menu-icon::after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 0.5px;
+        background-color: red;
+      }
+      .menu-icon::before {
+        top: -7px;
+      }
+      .menu-icon::after {
+        top: 7px;
+      }
+      .triangle {
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-color: #ff305b;
+        width: 180px;
+        height: 180px;
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+        /* border-radius: 6px; */
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden">
+    <div class="container overflow-hidden max-w-[100vw]">
+      <!-- Home -->
+      <div
+        id="home"
+        loading="lazy"
+        class="relative bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('../images/hero.webp')] bg-cover bg-center w-full h-screen"
+      >
+        <!-- <div class="absolute inset-0 bg-black/50"></div> black background -->
+        <!-- Header -->
+        <header
+          id="main-header"
+          class="px-5 lg:px-32 md:pt-4 pt-3 pb-3 md:fixed top-0 left-0 w-full z-50 transition-all duration-300"
+        >
+          <div class="md:flex justify-between w-full">
+            <h1 class="text-[#ff305b] lg:ml-12 text-2xl font-bold">Fokir</h1>
+            <div
+              id="menu-btn"
+              class="text-xl text-[#f7f3f7] hover:text-[#ff305b] transition duration-300 cursor-pointer absolute right-5 top-3 block md:hidden"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav
+              id="menu"
+              class="hidden flex-col space-y-1 text-center bg-[#333] absolute top-14 left-0 w-full px-5 py-2 z-[100] md:flex md:flex-row md:space-y-0 lg:space-x-7 md:space-x-5 md:static md:w-auto md:bg-transparent md:px-0 md:py-0"
+            >
+              <a
+                href="#home"
+                onclick="menu.classList.add('hidden')"
+                class="block sm:inline text-[#f7f3f7] hover:text-[#ff305b] transition duration-300"
+                >Home</a
+              >
+              <a
+                href="#about"
+                onclick="menu.classList.add('hidden')"
+                class="block sm:inline text-[#f7f3f7] hover:text-[#ff305b] transition duration-300"
+                >About</a
+              >
+              <a
+                href="#services"
+                onclick="menu.classList.add('hidden')"
+                class="block sm:inline text-[#f7f3f7] hover:text-[#ff305b] transition duration-300"
+                >Services</a
+              >
+              <a
+                href="#portfolio"
+                onclick="menu.classList.add('hidden')"
+                class="block sm:inline text-[#f7f3f7] hover:text-[#ff305b] transition duration-300"
+                >Portfolio</a
+              >
+              <a
+                href="#testimonia"
+                onclick="menu.classList.add('hidden')"
+                class="block sm:inline text-[#f7f3f7] hover:text-[#ff305b] transition duration-300"
+                >Testimonia</a
+              >
+              <a
+                href="#blog"
+                onclick="menu.classList.add('hidden')"
+                class="block sm:inline text-[#f7f3f7] hover:text-[#ff305b] transition duration-300"
+                >Blog</a
+              >
+              <a
+                href="#contact"
+                onclick="menu.classList.add('hidden')"
+                class="block sm:inline text-[#f7f3f7] hover:text-[#ff305b] transition duration-300"
+                >Contact</a
+              >
+            </nav>
+          </div>
+        </header>
+        <!-- Hello Alex -->
+        <div
+          class="absolute inset-x-4 top-[40%] mt-5 sm:mt-0 flex justify-center items-center text-center md:pt-0 z-10"
+        >
+          <div class="md:space-y-5 space-y-2">
+            <h3 class="text-[#f7f3f7] md:text-2xl text-xl font-bold font-mono">
+              Hello i'm
+            </h3>
+            <h1
+              class="tracking-wider uppercase text-[#ff305b] lg:text-6xl md:text-4xl text-3xl font-extrabold"
+            >
+              alex smith
+            </h1>
+            <p
+              class="tracking-wide capitalize text-[#f7f3f7] sm:text-2xl text-xl font-light"
+            >
+              professional web developer
+            </p>
+          </div>
+        </div>
+      </div>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!-- About -->
+      <div
+        class="w-full xl:px-36 md:pl-0 px-5 flex justify-center lg:py-28 sm:py-14 py-10"
+        id="about"
+      >
+        <div class="flex flex-col sm:flex-row justify-evenly">
+          <!-- image -->
+          <div
+            loading="lazy"
+            class="md:-ml-5 lg:-ml-0 border-8 border-[#555] md:border-white lg:border-[#555] rounded-lg relative lg:w-[23rem] md:w-[17rem] w-[15rem] lg:h-[28rem] md:h-[24rem] h-[18rem]"
+          >
+            <div
+              class="lg:w-[352px] md:w-[270px] w-[230px] lg:h-[430px] absolute lg:top-6 md:top-16 top-3 lg:left-6 md:left-0 left-3 rounded-md overflow-hidden group"
+            >
+              <img src="../images/about.webp" alt="no-image" loading="lazy" />
+              <div
+                class="translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out bg-[linear-gradient(rgba(0,0,0,0.5))] flex gap-x-6 text-slate-50 justify-center items-center absolute inset-0"
+              >
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-google"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- about-Data -->
+          <div class="basis-1/2 about-hello sm:mt-0 mt-7 mb-5">
+            <div class="">
+              <h1
+                class="text-[#333333] uppercase sm:text-4xl text-3xl font-[500] pb-5 md:pb-1 lg:pb-5"
+              >
+                <span class="text-[#ff305b] sm:text-4xl text-3xl">I</span>
+                Hello,
+              </h1>
+              <p class="text-[#555555] mr-10 sm:mr-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                unde totam tempore laborum repellat consequuntur delectus
+                tempora recusandae quidem est aut, minima deserunt libero
+                tenetur natus vero. Omnis perferendis itaque debitis asperiores
+                atque dolore, facere blanditiis odio magni quasi pariatur velit
+                accusamus at minus quidem laborum consequatur temporibus
+                adipisci mollitia? Laboriosam nesciunt odit totam iste.
+              </p>
+            </div>
+            <hr class="border-t border-dashed border-gray-400 lg:my-6 my-2" />
+            <!-- Data -->
+            <div class="sm:flex gap-x-24 space-y-2 sm:space-y-0">
+              <div class="sm:space-y-4 space-y-2">
+                <p class="text-[#555555]">
+                  <span class="font-bold text-[#333333]">Name</span>: Rdam smith
+                </p>
+                <p class="text-[#555555]">
+                  <span class="font-bold text-[#333333]">Age</span>: 26 Year
+                </p>
+                <p class="text-[#555555]">
+                  <span class="font-bold text-[#333333]">Freelance</span>:
+                  Available
+                </p>
+              </div>
+              <div class="sm:space-y-4 space-y-2">
+                <p class="text-[#555555]">
+                  <span class="font-bold text-[#333333]">Job Title</span>: UI/UX
+                  Designer
+                </p>
+                <p class="text-[#555555]">
+                  <span class="font-bold text-[#333333]">Location</span>: United
+                  Stated, US
+                </p>
+                <p class="text-[#555555]">
+                  <span class="font-bold text-[#333333]">E-mail</span>:
+                  example@gmail.com
+                </p>
+              </div>
+            </div>
+            <!-- Buttons -->
+            <div class="sm:space-x-8 space-x-3 mt-7">
+              <button
+                class="bg-[#ff305b] hover:bg-red-500 sm:w-40 w-32 h-10 rounded-md text-white font-medium text-sm sm:text-base"
+              >
+                Download CV
+                <i class="fa-solid fa-download ml-2"></i>
+              </button>
+              <button
+                class="bg-[#ff305b] hover:bg-red-500 sm:w-36 w-24 h-10 rounded-md text-white font-medium text-sm sm:text-base"
+              >
+                Hire Me
+                <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!-- Our Services -->
+      <div class="bg-[#f1f1f1] min-h-[500px] py-20 mb-10" id="services">
+        <div class="flex justify-center items-center">
+          <h1 class="capitalize sm:text-4xl text-3xl font-bold text-[#333333]">
+            our services
+            <div class="menu-icon mt-7"></div>
+          </h1>
+        </div>
+        <div
+          class="text-center grid lg:grid-cols-4 md:grid-cols-2 px-5 xl:px-36 md:px-10 justify-center gap-x-5 pt-10"
+        >
+          <div
+            class="space-y-4 max-w-[20rem] px-5 py-10 hover:bg-white hover:border-[#f1f1f1] hover:shadow-xl transition duration-500 ease-in-out group"
+          >
+            <i
+              class="fa-solid fa-pen-ruler text-2xl text-red-600 group-hover:scale-150 transition duration-500 ease-in-out"
+            ></i>
+            <h2
+              class="sm:text-2xl text-xl font-semibold text-[#333333] uppercase"
+            >
+              ui/ux design
+            </h2>
+            <p class="text-[#555555]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto sint tempora animi vero, quasi fugiat?
+            </p>
+          </div>
+          <div
+            class="space-y-4 max-w-[20rem] px-5 py-10 hover:bg-white hover:border-[#f1f1f1] hover:shadow-xl transition duration-500 ease-in-out group"
+          >
+            <i
+              class="fa-solid fa-code text-2xl text-red-600 group-hover:scale-150 transition duration-500 ease-in-out"
+            ></i>
+            <h2
+              class="sm:text-2xl text-xl font-semibold text-[#333333] uppercase"
+            >
+              app development
+            </h2>
+            <p class="text-[#555555]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto sint tempora animi vero, quasi fugiat?
+            </p>
+          </div>
+          <div
+            class="space-y-4 max-w-[20rem] px-5 py-10 hover:bg-white hover:border-[#f1f1f1] hover:shadow-xl transition duration-500 ease-in-out group"
+          >
+            <i
+              class="fa-solid fa-circle-user text-2xl text-red-600 group-hover:scale-150 transition duration-500 ease-in-out"
+            ></i>
+            <h2
+              class="sm:text-2xl text-xl font-semibold text-[#333333] uppercase"
+            >
+              product design
+            </h2>
+            <p class="text-[#555555]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto sint tempora animi vero, quasi fugiat?
+            </p>
+          </div>
+          <div
+            class="space-y-4 max-w-[20rem] px-5 py-10 hover:bg-white hover:border-[#f1f1f1] hover:shadow-xl transition duration-500 ease-in-out group"
+          >
+            <i
+              class="fa-solid fa-truck text-2xl text-red-600 group-hover:scale-150 transition duration-500 ease-in-out"
+            ></i>
+            <h2
+              class="sm:text-2xl text-xl font-semibold text-[#333333] uppercase"
+            >
+              ui/ux design
+            </h2>
+            <p class="text-[#555555]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto sint tempora animi vero, quasi fugiat?
+            </p>
+          </div>
+        </div>
+      </div>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!-- Our Portfolio -->
+      <div class="min-h-screen sm:pt-12 sm:mb-24 mb-1" id="portfolio">
+        <div class="flex justify-center items-center">
+          <h2 class="capitalize sm:text-4xl text-3xl font-bold text-[#333333]">
+            our portfolio
+            <div class="menu-icon mt-7"></div>
+          </h2>
+        </div>
+        <div>
+          <!-- buttons -->
+          <div
+            class="buttons py-10 flex justify-center sm:gap-x-10 gap-x-3 sm:text-base text-sm text-[#333333]"
+          >
+            <button
+              onclick="filterItems('all')"
+              class="active:text-red-600 uppercase all"
+            >
+              all
+            </button>
+            <button
+              onclick="filterItems('graphic')"
+              class="active:text-red-600 uppercase graphic"
+            >
+              graphic
+            </button>
+            <button
+              onclick="filterItems('web')"
+              class="active:text-red-600 uppercase web"
+            >
+              web design
+            </button>
+            <button
+              onclick="filterItems('branding')"
+              class="active:text-red-600 uppercase branding"
+            >
+              branding
+            </button>
+          </div>
+          <!-- photos -->
+          <div
+            class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 xl:px-48 md:px-5 px-2.5"
+          >
+            <div
+              onclick="openSlides(1)"
+              data-category="1"
+              loading="lazy"
+              class="item relative group sm:max-w-[360px] min-w-[300px] min-h-[270px] bg-[url('../images/portfolio/1.webp')] bg-cover bg-center overflow-hidden"
+            >
+              <!-- overlay -->
+              <div
+                class="absolute bg-black inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-500 ease-in-out"
+              ></div>
+              <button
+                class="absolute bottom-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <i class="fa-solid fa-tablet-button text-xl text-red-600"></i>
+              </button>
+            </div>
+            <div
+              onclick="openProjectName()"
+              data-category="2"
+              loading="lazy"
+              class="item relative group sm:max-w-[360px] min-w-[300px] h-[270px] bg-[url('../images/portfolio/2.webp')] bg-cover bg-center overflow-hidden"
+            >
+              <!-- overlay -->
+              <div
+                class="absolute bg-black inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-500 ease-in-out"
+              ></div>
+              <button
+                class="absolute bottom-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <i class="fa-solid fa-tablet-button text-xl text-red-600"></i>
+              </button>
+            </div>
+            <div
+              onclick="openbg_black()"
+              data-category="3"
+              loading="lazy"
+              class="item relative group sm:max-w-[360px] min-w-[300px] h-[270px] bg-[url('../images/portfolio/3.webp')] bg-cover bg-center overflow-hidden"
+            >
+              <!-- overlay -->
+              <div
+                class="absolute bg-black inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-500 ease-in-out"
+              ></div>
+              <button
+                class="absolute bottom-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <i class="fa-solid fa-tablet-button text-xl text-red-600"></i>
+              </button>
+            </div>
+            <div
+              onclick="openSlides(2)"
+              data-category="4"
+              loading="lazy"
+              class="item relative group sm:max-w-[360px] min-w-[300px] h-[270px] bg-[url('../images/portfolio/4.webp')] bg-cover bg-center overflow-hidden"
+            >
+              <!-- overlay -->
+              <div
+                class="absolute bg-black inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-500 ease-in-out"
+              ></div>
+              <button
+                class="absolute bottom-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <i class="fa-solid fa-tablet-button text-xl text-red-600"></i>
+              </button>
+            </div>
+            <div
+              onclick="openProjectName()"
+              data-category="5"
+              loading="lazy"
+              class="item relative group sm:max-w-[360px] min-w-[300px] h-[270px] bg-[url('../images/portfolio/5.webp')] bg-cover bg-center overflow-hidden"
+            >
+              <!-- overlay -->
+              <div
+                class="absolute bg-black inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-500 ease-in-out"
+              ></div>
+              <button
+                class="absolute bottom-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <i class="fa-solid fa-tablet-button text-xl text-red-600"></i>
+              </button>
+            </div>
+            <div
+              onclick="openbg_black()"
+              data-category="6"
+              loading="lazy"
+              class="item relative group sm:max-w-[360px] min-w-[300px] h-[270px] bg-[url('../images/portfolio/6.webp')] bg-cover bg-center overflow-hidden"
+            >
+              <!-- overlay -->
+              <div
+                class="absolute bg-black inset-0 opacity-0 group-hover:opacity-50 transition-opacity duration-500 ease-in-out"
+              ></div>
+              <button
+                class="absolute bottom-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <i class="fa-solid fa-tablet-button text-xl text-red-600"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!-- Project Name -->
+        <div
+          id="project_name"
+          class="z-[100] hidden bg-[#7f7f7f] group w-full overflow-hidden h-min-full absolute"
+        >
+          <div
+            class="xl:mx-[29rem] lg:mx-64 md:mx-36 mx-5 bg-white p-5 my-10 rounded-md shadow-2xl"
+          >
+            <!-- project name -->
+            <div class="flex justify-between pr-4 pb-3">
+              <h1 class="capitalize sm:text-2xl text-lg text-red-600 font-bold">
+                project name
+              </h1>
+              <a
+                href=""
+                onclick="closeProjectName(event)"
+                class="text-sm text-[#575757]"
+                ><i class="fa-solid fa-x mt-2"></i
+              ></a>
+            </div>
+            <hr />
+            <!-- content -->
+            <div class="pt-3">
+              <img
+                src="../images/portfolio/2.webp"
+                class="w-full"
+                alt="no-image"
+                loading="lazy"
+              />
+              <p class="pt-5 text-[#575757]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti quam, quas dolor ad ratione tempora. Necessitatibus,
+                optio quidem! Eligendi velit atque iusto harum voluptas
+                doloremque pariatur.
+              </p>
+              <!-- dataaaaa -->
+              <div class="pt-3 space-y-1">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-user text-red-600"></i>
+                  <p class="text-[14px] text-[#575757]">alex smith</p>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-envelope text-red-600"></i>
+                  <a
+                    href="#"
+                    class="text-[14px] text-red-600 hover:underline decoration-1 decoration-red-600"
+                    >www.example.com</a
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-calendar-days text-red-600"></i>
+                  <p class="text-[14px] text-[#575757]">6 December 2004</p>
+                </div>
+              </div>
+              <!-- share -->
+              <div class="text-[#2d2d2d] py-3">
+                <h1 class="text-xl font-semibold">Share</h1>
+                <div class="text-[#575757] flex gap-4 pt-3">
+                  <a href="www.facebook.com"
+                    ><i class="fa-brands fa-facebook hover:text-red-600"></i
+                  ></a>
+                  <a href="www.twitter.com"
+                    ><i class="fa-brands fa-twitter hover:text-red-600"></i
+                  ></a>
+                  <a href="www.google.com"
+                    ><i class="fa-brands fa-google hover:text-red-600"></i
+                  ></a>
+                  <a href="www.github.com"
+                    ><i class="fa-brands fa-github hover:text-red-600"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!-- BG_Black -->
+        <div
+          id="bg_black"
+          class="z-[100] hidden bg-[#7f7f7f] w-full h-full xl:px-[20rem] md:px-[4.5rem] xl:py-[7rem] lg:py-[4rem] md:py-[9rem] py-[14rem]"
+        >
+          <div
+            loading="lazy"
+            class="relative bg-black lg:h-[30rem] md:h-[20rem] h-[10rem] lg:w-[55rem] md:w-[40rem] w-[30rem] shadow-2xl"
+          >
+            <i
+              onclick="closebg_black(event)"
+              class="fa-solid fa-xmark text-white absolute sm:-top-7 -top-5 md:right-1 overflow-hidden right-44 cursor-pointer"
+            ></i>
+          </div>
+        </div>
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!-- photossssss -->
+        <div
+          id="slider"
+          class="z-[100] hidden bg-[#7f7f7f] w-full h-screen flex justify-center items-center"
+        >
+          <i
+            onclick="prevSlide()"
+            class="fa-solid fa-circle-arrow-left absolute top-1/2 lg:left-10 left-2 text-4xl text-white cursor-pointer hover:text-black transition duration-300 ease-in-out z-10"
+          ></i>
+
+          <i
+            onclick="closeSlides(event)"
+            class="fa-solid fa-xmark absolute xl:top-[14%] lg:top-[8%] sm:top-[10%] top-[28%] z-50 text-white left-[93%] md:left-[88%] xl:left-[70%] lg:left-[78%] cursor-pointer"
+          ></i>
+          <div
+            class="relative bg-white sm:max-w-[40rem] min-w-[20rem] overflow-hidden shadow-2xl lg:top-[12%] xl:top-[18%] sm:top-[14%] top-[32%] sm:left-[8%] lg:left-[18%] xl:left-[28%]"
+          >
+            <div
+              class="slides flex w-full h-full transition duration-700 ease-in-out"
+            >
+              <img
+                src="../images/portfolio/1.webp"
+                class="w-full object-cover shrink-0"
+                alt="Slide 1"
+                loading="lazy"
+              />
+              <img
+                src="../images/portfolio/4.webp"
+                class="w-full object-cover shrink-0"
+                alt="Slide 2"
+                loading="lazy"
+              />
+              <img
+                src="../images/portfolio/6.webp"
+                class="w-full object-cover shrink-0"
+                alt="Slide 3"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <p
+            class="text-white text-sm absolute top-[73%] sm:top-[65%] md:top-[94%] pt-[4.5rem] sm:pt-0 lg:top-[93%] xl:top-[87%] left-[85%] lg:left-[76%] xl:left-[69%]"
+          >
+            <span id="numof_ph"></span> of 3
+          </p>
+          <i
+            onclick="nextSlide()"
+            class="fa-solid fa-circle-arrow-right absolute top-1/2 lg:right-10 right-2 text-4xl text-white cursor-pointer hover:text-black transition duration-300 ease-in-out z-10"
+          ></i>
+        </div>
+      </div>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!-- Numbers -->
+      <div
+        class="bg-[#f1f1f1] py-14 sm:py-0 space-y-10 sm:space-y-0 sm:flex items-center md:px-16 lg:px-40 justify-around sm:h-72 text-center sm:mt-28 mt-20"
+      >
+        <div class="sm:space-y-2 space-y-1">
+          <i class="fa-solid fa-users text-[#ff305b] text-2xl font-bold"></i>
+          <p id="rndnumber1" class="text-gray-800 text-2xl font-bold"></p>
+          <p class="text-[#555555] text-sm font-semibold tracking-wider">
+            Team members
+          </p>
+        </div>
+        <div class="sm:space-y-2 space-y-1">
+          <i class="fa-regular fa-file text-[#ff305b] text-2xl font-bold"></i>
+          <p id="rndnumber2" class="text-gray-800 text-2xl font-bold"></p>
+          <p class="text-[#555555] text-sm font-semibold tracking-wider">
+            Complete projects
+          </p>
+        </div>
+        <div class="sm:space-y-2 space-y-1">
+          <i class="fa-solid fa-download text-[#ff305b] text-2xl font-bold"></i>
+          <p id="rndnumber3" class="text-gray-800 text-2xl font-bold"></p>
+          <p class="text-[#555555] text-sm font-semibold tracking-wider">
+            Files downloaded
+          </p>
+        </div>
+        <div class="sm:space-y-2 space-y-1">
+          <i class="fa-solid fa-code text-[#ff305b] text-2xl font-bold"></i>
+          <p id="rndnumber4" class="text-gray-800 text-2xl font-bold"></p>
+          <p class="text-[#555555] text-sm font-semibold tracking-wider">
+            Lines Of codes
+          </p>
+        </div>
+      </div>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!-- client's feedback -->
+      <div class="h-3/4 sm:pt-24 pt-10 sm:mb-24 mb-14" id="testimonia">
+        <!-- title -->
+        <div class="flex justify-center items-center">
+          <h2 class="capitalize sm:text-4xl text-3xl font-bold text-[#333333]">
+            client's feedback
+            <div class="menu-icon mt-7"></div>
+          </h2>
+        </div>
+        <!-- slides -->
+        <div
+          class="slider-container overflow-hidden w-full max-w-[750px] mx-auto mt-12 rounded-md"
+        >
+          <div class="slidesWrapper flex transition-transform duration-500">
+            <!-- Slide 1 -->
+            <div
+              class="slide w-full bg-[#f1f1f1] sm:h-[270px] pb-10 sm:pb-0 rounded-md relative overflow-hidden flex-shrink-0"
+            >
+              <!-- triangle -->
+              <div class="grid sm:grid-cols-4 grid-cols-1">
+                <div>
+                  <span class="triangle"></span>
+                  <img
+                    src="../images/feedback.webp"
+                    class="rounded-full z-20 absolute size-28 top-10 left-10"
+                    alt="no-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="col-span-3 sm:-ml-3 ml-5 sm:pt-10 pt-44 space-y-2">
+                  <p
+                    class="sm:text-2xl text-xl font-extrabold text-[#333] font-serif"
+                  >
+                    Alex ander
+                  </p>
+                  <p
+                    class="hover:underline cursor-pointer underline-offset-2 text-[#777] font-medium text-sm"
+                  >
+                    <i class="fa-solid fa-location-dot text-sm"></i> United
+                  </p>
+                  <p class="text-[#5d5656] sm:pr-5 pr-16 italic">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quae enim quas eum accusamus vel ducimus iusto dolore
+                    veritatis, quidem, rerum officia quia esse repellendus?
+                  </p>
+                  <div>
+                    <i class="text-yellow-400 text-sm fa-solid fa-star"></i>
+                    <i class="text-yellow-400 text-sm fa-solid fa-star"></i>
+                    <i class="text-yellow-400 text-sm fa-solid fa-star"></i>
+                    <i class="text-yellow-400 text-sm fa-solid fa-star"></i>
+                    <i class="text-yellow-400 text-sm fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div
+              class="slide w-full bg-[#f1f1f1] sm:h-[270px] pb-10 sm:pb-0 rounded-md relative overflow-hidden flex-shrink-0"
+            >
+              <!-- triangle -->
+              <div class="grid sm:grid-cols-4 grid-cols-1">
+                <div>
+                  <span class="triangle"></span>
+                  <img
+                    src="../images/3.webp"
+                    class="rounded-full z-20 absolute size-28 top-10 left-10"
+                    alt="no-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="col-span-3 sm:-ml-3 ml-5 sm:pt-10 pt-44 space-y-2">
+                  <p
+                    class="sm:text-2xl text-xl font-extrabold text-[#333] font-serif"
+                  >
+                    Alex ander
+                  </p>
+                  <p
+                    class="hover:underline cursor-pointer underline-offset-2 text-[#777] font-medium text-sm"
+                  >
+                    <i class="fa-solid fa-location-dot text-sm"></i> United
+                  </p>
+                  <p class="text-[#5d5656] sm:pr-5 pr-16 italic">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quae enim quas eum accusamus vel ducimus iusto dolore
+                    veritatis, quidem, rerum officia quia esse repellendus?
+                  </p>
+                  <div>
+                    <i class="text-yellow-400 text-sm fa-solid fa-star"></i>
+                    <i class="text-yellow-400 text-sm fa-solid fa-star"></i>
+                    <i class="text-yellow-400 text-sm fa-solid fa-star"></i>
+                    <i class="text-yellow-400 text-sm fa-solid fa-star"></i>
+                    <i class="text-yellow-400 text-sm fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- dots -->
+        <div class="dots flex gap-2 justify-center mt-5">
+          <span
+            onclick="goToSlide(0)"
+            class="dot w-6 h-2.5 rounded-full bg-[#ff305b] cursor-pointer"
+          ></span>
+          <span
+            onclick="goToSlide(1)"
+            class="dot w-2.5 h-2.5 rounded-full border border-[#ff305b] cursor-pointer"
+          ></span>
+        </div>
+      </div>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!-- Our Blog -->
+      <div
+        class="min-h-screen sm:pt-24 pt-10 lg:pb-24 pb-14 bg-[#f1f1f1]"
+        id="blog"
+      >
+        <!-- title -->
+        <div class="flex justify-center items-center mb-14">
+          <h2
+            class="capitalize sm:text-4xl text-3xl text-center font-bold text-[#333333]"
+          >
+            our blog
+            <div class="menu-icon mt-7"></div>
+          </h2>
+        </div>
+        <!-- cards -->
+        <div
+          class="cards sm:flex items-center justify-center xl:space-x-8 space-y-10 md:space-y-0"
+        >
+          <!-- card 1 -->
+          <div class="card overflow-hidden sm:w-[370px] mx-5 bg-white">
+            <a href="#"
+              ><img src="../images/blog/12.webp" alt="no-image" loading="lazy"
+            /></a>
+            <div class="p-5 space-y-4">
+              <p class="text-[#555555] mb-2">23 November, 2015</p>
+              <a
+                href="#"
+                class="capitalize lg:text-[23px] text-[16px] leading-7 font-semibold text-[#333] hover:text-[#ff305b] transition duration-300"
+                >web design blog post</a
+              >
+              <p class="text-[#555555]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                architecto voluptatibus cupiditate itaque, nam nobis, earum
+                magni illum, culpa deleniti rem? Dolores.
+              </p>
+              <button
+                class="uppercase text-[#333] hover:text-[#ff305b] transition duration-300"
+              >
+                read more <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <!-- class="w-full  md:h-[122px] lg:h-[173px] xl:h-[209px]" -->
+          <div class="card overflow-hidden sm:w-[370px] mx-5 bg-white">
+            <a href="#">
+              <iframe
+                src="https://www.youtube.com/embed/uVju5--RqtY?feature=oembed"
+                allowfullscreen
+                allow="autoplay; encrypted-media"
+                class="w-full md:h-[122px] lg:h-[173px] xl:h-[209px]"
+                frameborder="0"
+                loading="lazy"
+              ></iframe>
+            </a>
+            <div class="p-5 space-y-4">
+              <p class="text-[#555555] mb-2">20 April, 2018</p>
+              <a
+                href="#"
+                class="capitalize lg:text-[23px] text-[16px] leading-7 font-semibold text-[#333] hover:text-[#ff305b] transition duration-300"
+                >development blog post</a
+              >
+              <p class="text-[#555555]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                architecto voluptatibus cupiditate itaque, nam nobis, earum
+                magni illum, culpa deleniti rem? Dolores.
+              </p>
+              <button
+                class="uppercase text-[#333] hover:text-[#ff305b] transition duration-300"
+              >
+                read more <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="card overflow-hidden sm:w-[370px] mx-5 bg-white">
+            <a href="#"
+              ><img src="../images/blog/32.webp" alt="no-image" loading="lazy"
+            /></a>
+            <div class="p-5 space-y-4">
+              <p class="text-[#555555] mb-2">17 May, 2017</p>
+              <a
+                href="#"
+                class="capitalize lg:text-[23px] text-[16px] leading-7 font-semibold text-[#333] hover:text-[#ff305b] transition duration-300"
+                >full width blog post</a
+              >
+              <p class="text-[#555555]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                architecto voluptatibus cupiditate itaque, nam nobis, earum
+                magni illum, culpa deleniti rem? Dolores.
+              </p>
+              <button
+                class="uppercase text-[#333] hover:text-[#ff305b] transition duration-300"
+              >
+                read more <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!-- contact us -->
+      <div class="h-3/4 w-full sm:pt-24 pt-10 sm:mb-24 mb-14" id="contact">
+        <!-- title -->
+        <div class="flex justify-center items-center mb-14">
+          <h2
+            class="capitalize sm:text-4xl text-3xl text-center font-bold text-[#333333]"
+          >
+            contact us
+            <div class="menu-icon mt-7"></div>
+          </h2>
+        </div>
+        <!-- form -->
+        <div class="sm:flex justify-center sm:mx-0 mx-5">
+          <form action="" class="space-y-8">
+            <div class="sm:flex sm:gap-x-8 space-y-8 sm:space-y-0">
+              <div class="flex flex-col lg:w-96 md:w-80">
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Name"
+                  required
+                  class="border border-[#ccc] rounded-md h-10 p-2 focus:border-[#ff305b] outline-none"
+                />
+                <p id="name-error" class="text-[#c24b49] mt-2 hidden">
+                  FirstName is required
+                </p>
+              </div>
+              <div class="flex flex-col lg:w-96 md:w-80">
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Email"
+                  required
+                  class="border border-[#ccc] rounded-md h-10 p-2 focus:border-[#ff305b] outline-none"
+                />
+                <p id="email-error" class="text-[#c24b49] mt-2 hidden">
+                  Valid email is required
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col w-full">
+              <input
+                id="subject"
+                type="text"
+                placeholder="Subject"
+                required
+                class="border border-[#ccc] rounded-md h-10 p-2 focus:border-[#ff305b] outline-none"
+              />
+              <p id="subject-error" class="text-[#c24b49] mt-2 hidden">
+                Subject is required
+              </p>
+            </div>
+            <div class="flex flex-col w-full">
+              <textarea
+                name=""
+                id="message"
+                placeholder="Message of me"
+                required
+                class="border border-[#ccc] rounded-md h-28 p-2 focus:border-[#ff305b] outline-none"
+              ></textarea>
+              <p id="message-error" class="text-[#c24b49] mt-2 hidden">
+                Please, leave us a message
+              </p>
+            </div>
+            <button
+              id="send"
+              class="uppercase bg-[#ff305b] hover:bg-red-500 w-36 h-9 rounded-md text-white cursor-not-allowed"
+            >
+              send message
+            </button>
+          </form>
+        </div>
+      </div>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!------------------------------------------------>
+      <!-- footer -->
+      <footer
+        class="bg-[#333] h-40 text-center content-center space-y-3 px-5 sm:px-0"
+      >
+        <div class="text-[#f2ffff] space-x-5">
+          <a href="" class="hover:text-[#ff305b] transition duration-500"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="" class="hover:text-[#ff305b] transition duration-500"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="" class="hover:text-[#ff305b] transition duration-500"
+            ><i class="fa-brands fa-google"></i
+          ></a>
+          <a href="" class="hover:text-[#ff305b] transition duration-500"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+        <p class="text-[#f2ffff]">
+          Copy Right 2018 © By
+          <a href="#" class="text-[#ff305b] hover:underline">Theme-fair</a> All
+          Rights Reserved
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
